@@ -1,6 +1,9 @@
 ---
 - hosts: all
   become: yes
+  become_user: edureka
+  vars:
+    ansible_ssh_private_key_file: /var/lib/jenkins/.ssh/id_rsa
   tasks:
     - name: Add Docker GPG key
       apt_key:
@@ -21,3 +24,5 @@
         - curl
         - software-properties-common
         - docker-ce
+
+
