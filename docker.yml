@@ -1,7 +1,7 @@
 ---
 - hosts: all
   become: yes
-  become_user: root
+  become_user: edureka
   vars:
     ansible_ssh_private_key_file: /home/edureka/.ssh/id_rsa
   tasks:
@@ -24,4 +24,3 @@
         - curl
         - software-properties-common
         - docker-ce
-
